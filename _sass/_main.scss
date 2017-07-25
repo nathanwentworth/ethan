@@ -1,4 +1,186 @@
 
+// # generated sass variables
+
+$font-color-light: lighten($font-color, 25%);
+$font-color-dark: darken($font-color, 20%);
+
+$background-color-light: lighten($background-color, 25%);
+$background-color-mid: darken($background-color, 4%);
+$background-color-dark: darken($background-color, 20%);
+
+// # styles
+
+// ## global styles
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  text-shadow: none;
+  background-color: $primary-color;
+  color: $background-color;
+}
+
 body {
-  background: $primary-color;
+  margin: 0;
+  background-color: $background-color;
+  color: $font-color;
+  font-family: $body-font;
+  font-size: $font-size;
+  text-decoration-skip: ink;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  color: $primary-color;
+  font-family: $title-font;
+  font-weight: 700;
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, .title:first-child {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.4;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a:link, a:visited {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: darken($primary-color, 20%);
+  text-decoration: underline;
+}
+
+.main-container {
+  max-width: $max-width;
+  margin: auto;
+  width: 98%;
+  padding: 2rem;
+}
+
+
+
+header {
+  // background-color: darken($background-color, 2.5%);
+  // padding: 1.5rem;
+  // margin: 2rem;
+  margin-bottom: 2rem;
+  // border-radius: $border-radius;
+  border-bottom: 1px dotted $primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+
+  div {
+    // display: inline-block;
+  }
+
+  nav {
+    text-align: right;
+    font-size: 1.25rem;
+
+    a {
+      margin-left: 1em;
+    }
+  }
+
+  img, svg {
+    height: 2.75rem;
+    width: 2.75rem;
+    display: inline;
+  }
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main.home {
+  padding-bottom: 2rem;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+section.project {
+  // padding: 0 2rem;
+  width: 50%;
+}
+
+section.project:first-of-type {
+  padding-right: 2rem;
+}
+
+.section-title::after {
+  content: "\2014";
+  margin-left: 0.5rem;
+}
+
+.about-title {
+  margin-bottom: 0;
+}
+
+.home .entry {
+  margin-bottom: 2rem;
+}
+
+.entry-date {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+
+
+
+
+
+
+// ## utility classes
+
+.light-text {
+  color: $font-color-light;
+}
+
+a.btn {
+  display: inline-block;
+  padding: 0.65em;
+  border-radius: $border-radius;
+  background-color: $background-color-mid;
+  font-family: $title-font;
+  font-weight: bold;
+  // box-shadow: 1px 1px 3px $background-color-dark;
+}
+
+
+// # Responsive Rules
+
+@media screen and (max-width: 959px) {
+
+}
+
+@media screen and (min-width: 960px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.2rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
 }

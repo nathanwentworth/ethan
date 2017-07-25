@@ -1,21 +1,20 @@
 ---
 ---
 
-$primary-color: #36465f;
-$secondary-color: #464646;
-$error: #de3535;
-$success: #d5f5d7;
+$primary-color: #7A57D1;
+// $primary-color: #5A3662;
+// $primary-color: #4797B1;
+// $primary-color: #004A7C;
+$secondary-color: #7F7F7F;
+$background-color: #fbfbfb;
 
 $max-width: 960px;
 
-// Breakpoints. Use these in your media queries.
-$sm: 321px;
-$md: 769px;
-$lg: 1140px;
-$xl: 1300px;
+$border-radius: 6px;
 
 $font-size: 16px;
-$font-family: Helvetica, sans-serif;
+$body-font: 'Fira Sans', sans-serif;
+$title-font: 'Archivo Black', sans-serif;
 $alt-font-family: monospace;
 $font-color: #353535;
 

@@ -1,23 +1,42 @@
 # Site settings
-title: My Little Website
-tagline: "Changing the world, one uninspired quote at a time"
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
-subdirectory: ""
+title: "Ethan Thibault"
+tagline: "Hello I am Ethan and this is my Web Site"
+url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URLs
 
 # Social
 socialimg: /img/social.jpg # be sure to change this image
-facebook: fbusername
-twitter: twusername
-github: ghusername
-googleplus: gusername
-instagram: igusername
 
 # Contact
 phone: "916-276-1044" # This is my real number. You should text me.
 email: "hello@garrettboatman.com" # This is my real email address. Please don't email me.
 
+# Font
+font: '<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Archivo+Black" rel="stylesheet">'
+# you must use single quotes for this
+
+# Header Nav Links
+
+textlinks:
+  "About": "/about/"
+  "itch.io": "https://itch.io"
+
+imagelinks:
+  "Twitter_Logo_Blue.png": "https://twitter.com"
+  "medium-m-color-100px.png": "https://medium.com"
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /project/:title/
+    layout: project
+  writing:
+    output: true
+    permalink: /writing/:title/
+    layout: writing
+
 # Use this for production
 #sass:
 #    style: :compressed
 
-exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json, docs]
