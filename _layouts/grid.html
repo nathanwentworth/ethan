@@ -22,7 +22,7 @@ layout: default
     <p>{{ entry.excerpt }}</p>
     {% endif %}
 
-    <a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}" class="btn">Read More</a>
+    {% unless site.hide_read_more or entry.hide_read_more %}<a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}" class="btn">Read More</a>{% endunless %}
   </div>
 
 {% endfor %}

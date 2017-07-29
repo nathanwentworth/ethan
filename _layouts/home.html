@@ -52,9 +52,9 @@ layout: default
     <div class="about-container">
       <img src="{{ site.github.url }}{{ site.portrait }}" class="portrait">
 
-      <p>{{ page.content }}<br><br>
+      <p>{{ page.content }}{% unless site.hide_read_more %}<br><br>
 
-      <a href="/about/" class="btn">Read More</a></p>
+      <a href="/about/" class="btn">Read More</a>{% endunless %}</p>
     </div>
 
 

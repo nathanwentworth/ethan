@@ -4,7 +4,7 @@ tagline: "Producer and Writer"
 permalink: /:collection/:title/
 
 # Global options
-hide_read_more: false
+hide_read_more: true
 
 # Social
 socialimg: /img/social.jpg # be sure to change this image
