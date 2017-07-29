@@ -1,2 +1,32 @@
+<footer>
 
+  {% if site.phone or site.email or site.twitter %}
+  <div class="footer-section">
+    <ul>
+      {% if site.phone %}
+      <li>Phone: <a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+      {% endif %}
+      {% if site.email %}
+      <li>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      {% endif %}
+      {% if site.twitter %}
+      <li>Twitter: <a href="https://twitter.com/{{ site.twitter }}">{{ site.twitter }}</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="footer-section">
+    <ul>
+      {% for link in site.textlinks %}
+        {% if link[1] contains "http" %}
+          <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+        {% else %}
+          <li><a href="{{ site.github.url }}{{ link[1] }}">{{ link[0] }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+</footer>
 

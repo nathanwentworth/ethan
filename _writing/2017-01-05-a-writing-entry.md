@@ -1,10 +1,11 @@
 ---
-title: "What's up with all those millennials am i rite"
-image: "Pasted Graphic 30.jpeg"
+title: Lorem ipsum
+image: "Attachment 5.jpeg"
 featured: true
+ext_url: https://twitter.com
 ---
 
-ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+[Lorem ipsum](goog) dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat.

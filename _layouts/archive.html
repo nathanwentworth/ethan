@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<main class="archive">
+  <h1 class="section-title">Writing</h1>
+
+  {% for entry in site.writing reversed %}
+    {% assign currentdate = entry.date | date: "%B %Y" %}
+    {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h3 id="{{entry.date | date: "%B%Y"}}" class="section-title"><a href="#{{entry.date | date: "%B%Y"}}">{{ currentdate }}</a></h3>
+      <ul>
+      {% assign date = currentdate %}
+    {% endif %}
+      <li><a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}">{{ entry.title }}</a></li>
+    {% if forloop.last %}</ul>{% endif %}
+  {% endfor %}
+</main>
+
+
+<!-- from https://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year -->

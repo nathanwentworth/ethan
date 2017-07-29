@@ -8,7 +8,9 @@ excerpt: "Here's an excerpt override! This isn't required, but if you'd rather u
 
 featured: true
 
-noyear: true
+no_year: true
+
+hide_title: true
 
 ---
 

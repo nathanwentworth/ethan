@@ -11,21 +11,21 @@
     {% endif %}
   </div>
   <div class="header-right">
-    <nav class="text-links">
-      {% for link in site.textlinks %}
-        {% if link[1] contains "http" %}
-          <a href="{{ link[1] }}">{{ link[0] }}</a>
-        {% else %}
-          <a href="{{ site.github.url }}{{ link[1] }}">{{ link[0] }}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
     <nav class="image-links">
       {% for link in site.imagelinks %}
         {% if link[1] contains "http" %}
           <a href="{{ link[1] }}"><img src="{{ site.github.url }}/img/social/{{ link[0] }}"></a>
         {% else %}
           <a href="{{ site.github.url }}{{ link[1] }}"><img src="{{ site.github.url }}/img/social/{{ link[0] }}"></a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    <nav class="text-links">
+      {% for link in site.textlinks %}
+        {% if link[1] contains "http" %}
+          <a href="{{ link[1] }}">{{ link[0] }}</a>
+        {% else %}
+          <a href="{{ site.github.url }}{{ link[1] }}">{{ link[0] }}</a>
         {% endif %}
       {% endfor %}
     </nav>

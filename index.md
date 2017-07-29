@@ -1,5 +1,6 @@
 ---
 layout: home
+show_featured_title: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

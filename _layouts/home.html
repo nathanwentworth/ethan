@@ -7,49 +7,42 @@ layout: default
   <div class="section-container">
 
     <section class="project">
-      <h2 id="projects" class="section-title"><a href="/project/">Projects</a></h2>
+      {% if page.show_featured_title == true %}
+      <h2 id="projects" class="section-title"><a href="/project/">Featured Works</a></h2>
+      {% endif %}
 
-      {% for entry in site.projects reversed %}
-      {% if entry.featured %}
+      <div class="project-container">
+
+      {% assign featured_interactive = (site.interactive | where:"featured", "true") %}
+      {% assign featured_writing = (site.writing | where:"featured", "true") %}
+      {% assign featured_other = (site.other | where:"featured", "true") %}
+      {% assign featured = featured_interactive | concat: featured_writing | concat: featured_other | sort: "date" | reverse %}
+
+      {% for entry in featured limit:3 %}
 
         <div class="entry">
           {% if entry.image %}
+          <a href="{{ site.github.url }}{{ entry.url }}">
           <img src="{{ site.github.url }}/img/project/{{ entry.image }}">
+          </a>
           {% endif %}
           {% if entry.title %}
-          <h3><a href="{{ site.github.url }}{{ entry.url }}">{{ entry.title }}</a>{% unless entry.noyear %} &mdash; <span class="entry-date">{{ entry.date | date: "%Y" }}</span>{% endunless %}</h3>
+          {% unless entry.hide_title == true %}
+          <h3><a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}">{{ entry.title }}</a>{% unless entry.no_year == true %} &mdash; <span class="entry-date">{{ entry.date | date: "%Y" }}</span>{% endunless %}</h3>
+          {% endunless %}
           {% endif %}
           {% if entry.excerpt %}
           <p>{{ entry.excerpt }}</p>
           {% endif %}
+
+          <a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}" class="btn">Read More</a>
         </div>
 
-      {% endif %}
       {% endfor %}
 
-      <a href="/project/" class="btn">View More</a>
+      </div>
 
-    </section>
-
-    <section class="project">
-      <h2 id="writing" class="section-title"><a href="/writing/">Writing</a></h2>
-
-      {% for entry in site.writing reversed %}
-      {% if entry.featured %}
-
-        <div class="entry">
-          {% if entry.title %}
-          <h3><a href="{{ site.github.url }}{{ entry.url }}">{{ entry.title }}</a>{% unless entry.noyear %} &mdash; <span class="entry-date">{{ entry.date | date: "%Y" }}</span>{% endunless %}</h3>
-          {% endif %}
-          {% if entry.excerpt %}
-          <p>{{ entry.excerpt }}</p>
-          {% endif %}
-        </div>
-
-      {% endif %}
-      {% endfor %}
-
-      <a href="/writing/" class="btn">View More</a>
+      <!-- <a href="/project/" class="btn">View More</a> -->
 
     </section>
 
@@ -59,14 +52,16 @@ layout: default
 
     <h2 class="section-title about-title" id="About"><a href="/about/">About Ethan</a></h2>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="about-container">
+      <img src="{{ site.portrait }}" class="portrait">
 
-    <a href="/about/" class="btn">Read More</a>
+      <p>{{ page.content }}<br><br>
+
+      <a href="/about/" class="btn">Read More</a></p>
+    </div>
+
+
+
 
   </div>
 

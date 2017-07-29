@@ -1,5 +1,6 @@
-
+// ########################################################################## //
 // # generated sass variables
+// ########################################################################## //
 
 $font-color-light: lighten($font-color, 25%);
 $font-color-dark: darken($font-color, 20%);
@@ -8,9 +9,13 @@ $background-color-light: lighten($background-color, 25%);
 $background-color-mid: darken($background-color, 4%);
 $background-color-dark: darken($background-color, 20%);
 
+// ########################################################################## //
 // # styles
+// ########################################################################## //
 
-// ## global styles
+// ########################################################################## //
+// ## default styles
+// ########################################################################## //
 
 * {
   box-sizing: border-box;
@@ -57,7 +62,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: darken($primary-color, 20%);
+  color: $secondary-color;
   text-decoration: underline;
 }
 
@@ -68,7 +73,9 @@ a:hover, a:active {
   padding: 2rem;
 }
 
-
+// ########################################################################## //
+// ## header styles
+// ########################################################################## //
 
 header {
   // background-color: darken($background-color, 2.5%);
@@ -89,15 +96,15 @@ header {
   nav {
     text-align: right;
     font-size: 1.25rem;
+    font-family: $title-font;
+  }
 
-    a {
-      margin-left: 1em;
-    }
+  .text-links a {
+    margin-left: 1rem;
   }
 
   img, svg {
     height: 2.75rem;
-    width: 2.75rem;
     display: inline;
   }
 }
@@ -108,25 +115,22 @@ header {
   flex-direction: column;
 }
 
-main.home {
-  padding-bottom: 2rem;
-}
+// ########################################################################## //
+// ## home page styles
+// ########################################################################## //
 
 .section-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 3rem;
 }
 
-section.project {
+.project-container {
   // padding: 0 2rem;
-  width: 50%;
-}
-
-section.project:first-of-type {
-  padding-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .section-title::after {
@@ -138,8 +142,25 @@ section.project:first-of-type {
   margin-bottom: 0;
 }
 
-.home .entry {
+.entry {
   margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.home .entry {
+  width: calc((100% / 3) - (2rem / 3));
+
+  &:nth-of-type(3n - 2) {
+    margin-left: 0;
+  }
+}
+
+.grid .entry {
+  width: calc((100% / 2) - (1rem / 2));
+
+  &:nth-of-type(2n - 1) {
+    margin-left: 0;
+  }
 }
 
 .entry-date {
@@ -147,13 +168,88 @@ section.project:first-of-type {
   font-size: 0.85em;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about-container p {
+  display: inline-block;
+  width: 80%;
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 20%;
+  margin-right: 2rem;
+  display: inline-block;
+}
+
+// ########################################################################## //
+// ## archive
+// ########################################################################## //
+
+main.archive {
+
+}
+
+.archive ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.archive li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  font-size: 1.1em;
+  border-left: 2px solid $primary-color;
+}
+
+// ########################################################################## //
+// ## project
+// ########################################################################## //
+
+.project img {
+  margin: auto;
+}
+
+// ########################################################################## //
+// ## footer
+// ########################################################################## //
+
+footer {
+  border-top: 1px dotted $primary-color;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-section {
+  display: inline-block;
+  width: 30%;
+  margin-left: 1rem;
+  vertical-align: top;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      padding: 0.25rem 0;
+    }
+  }
+}
 
 
 
-
-
-
-// ## utility classes
+// ########################################################################## //
+// # utility classes
+// ########################################################################## //
 
 .light-text {
   color: $font-color-light;
@@ -170,10 +266,49 @@ a.btn {
 }
 
 
+// ########################################################################## //
 // # Responsive Rules
+// ########################################################################## //
 
 @media screen and (max-width: 959px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.15rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 1rem; }
 
+  // header {
+  //   flex-direction: column;
+
+  //   nav {
+  //     text-align: left;
+  //   }
+
+  //   .text-links a {
+  //     margin-left: 0;
+  //   }
+  // }
+
+  .entry, .home .entry, .grid .entry {
+    margin-left: 0;
+    width: 100%;
+  }
+  .about-container {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+    }
+  }
+  .portrait {
+    width: 60%;
+    margin-right: 0;
+  }
+
+  .footer-section {
+    width: 45%;
+  }
 }
 
 @media screen and (min-width: 960px) {

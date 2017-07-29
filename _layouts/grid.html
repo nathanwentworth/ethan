@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<main class="grid">
+<h1 class="section-title">Interactive</h1>
+
+<div class="project-container">
+{% for entry in site.interactive %}
+  <div class="entry">
+    {% if entry.image %}
+    <a href="{{ site.github.url }}{{ entry.url }}">
+    <img src="{{ site.github.url }}/img/project/{{ entry.image }}">
+    </a>
+    {% endif %}
+    {% if entry.title %}
+    {% unless entry.hide_title == true %}
+    <h3><a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}">{{ entry.title }}</a>{% unless entry.no_year == true %} &mdash; <span class="entry-date">{{ entry.date | date: "%Y" }}</span>{% endunless %}</h3>
+    {% endunless %}
+    {% endif %}
+    {% if entry.excerpt %}
+    <p>{{ entry.excerpt }}</p>
+    {% endif %}
+
+    <a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}" class="btn">Read More</a>
+  </div>
+
+{% endfor %}
+</div>
+</main>

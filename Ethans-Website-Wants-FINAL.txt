@@ -1,0 +1,63 @@
+# Ethan's Website Wants - FINAL
+7/24/17
+
+- Jekyll plz, so I can learn it and use it and it's flexible and stuff
+- **Writerly**, Smart, with a hint of **fun**
+- *Excellent* tyopography!
+    + Header should be HEAVY, distinct, serif?
+        * Arvo? 
+        * Zilla Slab?
+        * Raleway?
+        * Okygen?
+    + Body should be easy to read and simple, sans-serif
+        * Open Source Sans?
+        * Open Sans?
+        * Lato?
+- Lightweight / easy on the eyes
+- Color accents that are purple/Indigo or navy blue
+- Some hints of fancy web design flourishes?
+    - Fancy underlines? (The kind that skip serifs hanging below line?)
+    - Background image pattern or interesting texture?
+
+**Website Structure:**
+
+## Home
+**Header**
+    - Name 
+    - Byline (Producer and Writer)
+    - Links to **Interactive**, **Writing**, **About**
+    - Social Media Icons for Twitter, Medium, LinkedIn
+
+**Featured Works**
+    2-3 items with image, 1-3 sentence blurb, link
+    (I'll usually use this for works, but I could also use it for news links or something in the future)
+
+**Mini About**
+    - Picture
+    - Short blurb that I'll write with more info about me, leads to full about page
+
+## Interactive
+- Grid of Interactive Projects
+- Sections by Year
+- Per project:
+    * Image (all 3:2 aspect?)
+    * Title
+    * Year
+    * Role(s)
+    * Slugline (1 sentence)
+        - I'll write these, just give me space!
+        - OR do these clutter things up? Would love to hear your thoughts!
+
+## Writing
+- This will just be a list of links to writing I've done! I can obviously deal with the content, but really what I need is attractive looking type with bullet lists looking nice somehow!
+- (Up to you whether or not there are actually bullets)
+- Use headings to separate sections (by year, later in life maybe publication)
+
+## About
+- Pseudo-resume layout, aka sections with horizontal lines between
+    * Picture (circular?)
+    * Bio paragraph
+    * Experience
+    * Volunteer
+    * Education
+    * Skills

@@ -1,39 +1,54 @@
 # Site settings
 title: "Ethan Thibault"
-tagline: "Hello I am Ethan and this is my Web Site"
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URLs
+tagline: "Producer and Writer"
+permalink: /:collection/:title/
 
 # Social
 socialimg: /img/social.jpg # be sure to change this image
+portrait: /img/social/portrait.jpg
 
 # Contact
-phone: "916-276-1044" # This is my real number. You should text me.
-email: "hello@garrettboatman.com" # This is my real email address. Please don't email me.
+phone: "###-###-####"
+email: "me@website.com"
+twitter: "twitterusername"
 
 # Font
-font: '<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Archivo+Black" rel="stylesheet">'
+font: '<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Archivo+Black" rel="stylesheet">'
 # you must use single quotes for this
 
 # Header Nav Links
 
 textlinks:
   "About": "/about/"
-  "itch.io": "https://itch.io"
+  "Interactive": "/interactive/"
+  "Writing": "/writing/"
 
 imagelinks:
   "Twitter_Logo_Blue.png": "https://twitter.com"
   "medium-m-color-100px.png": "https://medium.com"
+  "In-2C-128px-TM.png": "https://linkedin.com"
 
 # Collections
 collections:
-  projects:
+  interactive:
     output: true
-    permalink: /project/:title/
-    layout: project
+    permalink: /interactive/:title/
   writing:
-    output: true
-    permalink: /writing/:title/
-    layout: writing
+    output: false
+  other:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "interactive"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "writing"
+    values:
+      layout: "project"
 
 # Use this for production
 #sass:
