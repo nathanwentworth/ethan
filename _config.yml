@@ -3,6 +3,9 @@ title: "Ethan Thibault"
 tagline: "Producer and Writer"
 permalink: /:collection/:title/
 
+# Global options
+hide_read_more: false
+
 # Social
 socialimg: /img/social.jpg # be sure to change this image
 portrait: /img/social/portrait.jpg
@@ -17,7 +20,6 @@ font: '<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Archivo+Bl
 # you must use single quotes for this
 
 # Header Nav Links
-
 textlinks:
   "About": "/about/"
   "Interactive": "/interactive/"
@@ -34,19 +36,15 @@ collections:
     output: true
     permalink: /interactive/:title/
   writing:
+    permalink: /#!/
     output: false
   other:
+    permalink: /#!/
     output: false
 
 defaults:
   - scope:
-      path: ""
       type: "interactive"
-    values:
-      layout: "project"
-  - scope:
-      path: ""
-      type: "writing"
     values:
       layout: "project"
 

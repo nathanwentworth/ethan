@@ -13,10 +13,6 @@ layout: default
 
       <div class="project-container">
 
-<!--       {% assign featured_interactive = site.interactive | where:"featured", "true" %} -->
-<!--       {% assign featured_writing = site.writing | where:"featured", "true" %} -->
-<!--       {% assign featured_other = site.other | where:"featured", "true" %} -->
-      <!-- {% assign featured = featured_interactive | concat: featured_writing | concat: featured_other | sort: "date" | reverse %} -->
       {% assign featured = site.documents | where:"featured", "true" | sort: "date" | reverse %}
 
       {% for entry in featured limit:3 %}
@@ -36,7 +32,7 @@ layout: default
           <p>{{ entry.excerpt }}</p>
           {% endif %}
 
-          <a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}" class="btn">Read More</a>
+          {% unless site.hide_read_more or entry.hide_read_more %}<a href="{% if entry.ext_url %}{{ entry.ext_url }}{% else %}{{ site.github.url }}{{ entry.url }}{% endif %}" class="btn">Read More</a>{% endunless %}
         </div>
 
       {% endfor %}

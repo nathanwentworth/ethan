@@ -6,7 +6,7 @@ This is a pretty straightforward Jekyll theme, all customization is in `/css/app
 
 ## Configuration
 
-Editing your `_config.yml` should be your first step. This contains global variables such as the site title, tagline, portrait image, contact info, etc. `textlinks` and `imagelinks` are both key/value pair arrays that populate the header and footer links. Try to keep them both in the same format they are currently. `imagelinks` pulls the images from the `/img/social/` folder, so place images in there to use them. 
+Editing your `_config.yml` should be your first step. This contains global variables such as the site title, tagline, portrait image, contact info, etc. `textlinks` and `imagelinks` are both key/value pair arrays that populate the header and footer links. Try to keep them both in the same format they are currently. `imagelinks` pulls the images from the `/img/social/` folder, so place images in there to use them. `hide_read_more` set true will globally hide the read more buttons on items (but not the about at the bottom of the home page).
 
 The `app.scss` file in `/css/` will be what you use to edit things about the appearance itself. `$primary-color` is the main theme color used for titles, links, underlines, highlight, etc. `$secondary-color` is what is used for link hover. `$background-color` is for the background color. `$max-width` sets the maximum width of the site (I don't entirely recommend changing that one. Not much should be negatively affected, but I think the design works best at 960px). `$border-radius` isn't used for much anymore, but it currently sets the corner radius of the "Read More" buttons. If you want to put in any css overrides, simply put them below `@import "main";`. Anything under that will override the site styles. 
 
@@ -37,5 +37,7 @@ There are a few key variables that are required, or at least heavily encouraged 
   - Use this if you don't want to display the year next to the title
 * hide_title: true
   - Use this if you don't want to display the title at all. 
+* hide_read_more: true
+  - Use this if you don't want the "Read More" button to display below the post. 
 
 
