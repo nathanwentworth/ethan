@@ -19,7 +19,9 @@
 
 		{{ content }}
 
+    {% unless site.hide_footer %}
     {% include footer.html %}
+    {% endunless %}
 
     </div>
 

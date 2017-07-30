@@ -5,6 +5,7 @@ permalink: /:collection/:title/
 
 # Global options
 hide_read_more: true
+hide_footer: true
 
 # Social
 socialimg: /img/social.jpg # be sure to change this image
