@@ -278,17 +278,26 @@ a.btn {
   h5 { font-size: 1.1rem; }
   h6 { font-size: 1rem; }
 
-  // header {
-  //   flex-direction: column;
+  header {
+    flex-direction: column;
 
-  //   nav {
-  //     text-align: left;
-  //   }
+    nav {
+      text-align: left;
+    }
 
-  //   .text-links a {
-  //     margin-left: 0;
-  //   }
-  // }
+    .text-links {
+      margin-bottom: 1rem;
+
+      a {
+        display: block;
+        margin-left: 0;
+      }
+    }
+
+    img, svg {
+      height: 2.45rem;
+    }
+  }
 
   .entry, .home .entry, .grid .entry {
     margin-left: 0;
